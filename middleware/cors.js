@@ -4,7 +4,8 @@ const corsMiddleware = (req, res, next) => {
     'http://localhost:3001',
     'http://localhost:3002',
     'http://localhost:3003',
-    'http://localhost:3004'
+    'http://localhost:3004',
+    'https://static-w95x.onrender.com'
   ];
   
   const origin = req.headers.origin;

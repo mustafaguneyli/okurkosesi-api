@@ -31,7 +31,7 @@ router.post('/login', async (req, res) => {
         email: user.email, 
         isAdmin: user.isAdmin 
       },
-      process.env.JWT_SECRET,
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9',
       { expiresIn: '24h' }
     );
 
@@ -88,7 +88,7 @@ router.post('/register', async (req, res) => {
     // Token oluştur
     const token = jwt.sign(
       { id: savedUser._id, isAdmin: savedUser.isAdmin },
-      process.env.JWT_SECRET,
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9',
       { expiresIn: '1d' }
     );
 

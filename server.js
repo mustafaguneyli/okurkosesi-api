@@ -62,7 +62,7 @@ app.use(cors({
     'http://localhost:3002',
     'http://localhost:3003',
     'http://localhost:3004',
-    'http://mustafa.yasinkarakoc.com/'
+    'https://static-w95x.onrender.com/'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

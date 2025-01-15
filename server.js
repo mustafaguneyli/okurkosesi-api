@@ -57,12 +57,7 @@ mongoose.connection.on('disconnected', () => {
 // CORS ayarları
 app.use(cors({
   origin: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'http://localhost:3002',
-    'http://localhost:3003',
-    'http://localhost:3004',
-    'https://static-w95x.onrender.com/'
+    'https://static-w95x.onrender.com'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -79,6 +74,9 @@ app.use(
 
 // CORS Preflight istekleri için
 app.options('*', cors());
+app.use(cors({
+  origin: "*",
+}));
 
 // Middleware
 app.use(corsMiddleware);

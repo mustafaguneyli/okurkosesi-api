@@ -69,6 +69,14 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+const allowedOrigin = process.env.ALLOWED_ORIGIN || '*';
+
+app.use(
+  cors({
+    origin: allowedOrigin,
+  })
+);
+
 // CORS Preflight istekleri için
 app.options('*', cors());
 
